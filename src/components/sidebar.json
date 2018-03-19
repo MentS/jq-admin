@@ -1,0 +1,47 @@
+ [{
+   "id": 1,
+   "title": "平台服务",
+   "active": false,
+   "items": [{
+     "title": "站点管理",
+     "icon": "topbar-sidebar-ecs",
+     "link": "/home/sites"
+   }, {
+     "title": "系统设置",
+     "icon": "topbar-sidebar-dide",
+     "link": "/home/index"
+   }]
+ }, {
+   "id": 2,
+   "title": "游戏中心",
+   "active": true,
+   "items": [{
+     "title": "彩票管理",
+     "icon": "topbar-sidebar-ecs",
+     "link": "/game"
+   }, {
+    "title": "体育赛事",
+    "icon": "topbar-sidebar-dide",
+    "link": ""
+  }, {
+    "title": "电子游艺",
+    "icon": "topbar-sidebar-dide",
+    "link": "#"
+  }, {
+    "title": "真人娱乐",
+    "icon": "topbar-sidebar-dide",
+    "link": "#"
+  }]
+ }, {
+   "title": "用户中心",
+   "items": []
+ }, {
+   "title": "系统设置",
+   "active": false,
+   "items": [{
+     "title": "任务中心",
+     "icon": "topbar-sidebar-dide",
+     "link": "//dev.job.jq.cn/",
+     "target": "_blank"
+   }]
+ }]
