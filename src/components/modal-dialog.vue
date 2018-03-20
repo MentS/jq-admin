@@ -39,12 +39,12 @@ export default {
   },
   data() {
     return {
-      open: true
+     
     };
   },
   methods: {
     close() {
-      this.open = false;
+      //this.open = false;
       this.$emit('close');
     }
   }
