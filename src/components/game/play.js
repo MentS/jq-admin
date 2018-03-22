@@ -10,7 +10,7 @@ module.exports = {
         value: 0
       }],
       valueType: 'number'
-    }],
+    }]，
     selectionType: 'normal'
   }]
 };

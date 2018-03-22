@@ -2,7 +2,10 @@
   <div>
     <div style="margin-top: 16px;">
       <div class="pull-right">
-        <button class="btn btn-primary btn-sm" @click="dialogOpen = true">添加站点</button>
+        <ht-input left-icon="icon-logo1"></ht-input>
+        <button class="btn btn-primary btn-sm" @click="handleDialogOpen">添加站点</button>
+        <ht-button type="primary" serach icon='icon-logo1' >添加</ht-button>
+       
       </div>
       <ul class="nav nav-tabs">
         <li class="active">
@@ -91,6 +94,7 @@
         </tr>
       </tbody>
     </table>
+    <ht-table></ht-table>
     <modal-dialog :open="dialogOpen" @close="dialogOpen = false">
       <form class="form-horizontal" slot="body">
         <div class="form-group">
@@ -116,20 +120,29 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default" >Sign in</button>
+            <button type="submit" class="btn btn-default">Sign in</button>
           </div>
         </div>
+         <!-- <ht-input :type="'password'" :label="'Email'" :placeholder="'Email'"></ht-input> -->
       </form>
+      <div slot="footer">
+        <button type="button" class="btn btn-default" @click="dialogOpen = false">Close</button>
+        <button type="button" class="btn btn-primary" @click="save">Save</button>
+      </div>
     </modal-dialog>
   </div>
 </template>
 
 <script>
 import ModalDialog from "../modal-dialog";
+import HtInput from "../component/ht-input";
+import HtTable from "../component/ht-table.vue"
+import HtButton from "../component/ht-button.vue"
+import HtRadio from "../component/radio.vue"
 
 export default {
   name: "GameIndex",
-  components: { ModalDialog },
+  components: { ModalDialog, HtInput,HtTable,HtButton,HtRadio },
   data() {
     return {
       data: {
@@ -151,14 +164,15 @@ export default {
     }
   },
   methods: {
-    // handleDialogOpen() {
-    //   this.dialogOpen = true;
-    // },
-    // closeModal() {
-    //   this.dialogOpen = false;
-    // },
+    handleDialogOpen() {
+      this.dialogOpen = true;
+    },
     handleProductNavbarToggle(e) {
       this.productNavbarOpen = !e;
+    },
+    save() {
+
+      this.dialogOpen = false;
     }
   }
 };

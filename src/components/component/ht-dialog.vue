@@ -16,8 +16,8 @@
           </div>
           <div class="modal-footer">
             <slot name="footer">
-              <!-- <button type="button" class="btn btn-default">Close</button>
-              <button type="button" class="btn btn-primary">Save</button> -->
+              <!-- <button type="button" class="btn btn-default" @click="close">Close</button>
+              <button type="button" class="btn btn-primary" @click="save">Save</button> -->
             </slot>
           </div>
         </div>
