@@ -108,7 +108,7 @@ export default {
   components: { ModalDialog },
   data() {
     return {
-      dialogOpen: true
+      dialogOpen: false
     };
   }
 };

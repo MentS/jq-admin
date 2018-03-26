@@ -13,7 +13,7 @@
             </div>
             <ul class="sidebar-trans" :style="{ 'max-height': nav.active ? nav.items.length * 40 +'px' : 0  }">
               <li class="nav-item" v-for="sub in nav.items">
-                <a :href="sub.link" class="sidebar-trans" :target="sub.target || '_self'">
+                <a :href="sub.href" class="sidebar-trans" :target="sub.target || '_self'">
                   <div class="nav-icon sidebar-trans">
                     <span :class="sub.icon"></span>
                   </div>

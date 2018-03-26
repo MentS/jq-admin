@@ -1,0 +1,16 @@
+{
+  "title": "权限系统",
+  "items": [{
+    "title": "菜单管理",
+    "link": "/message/notice"
+  }, {
+    "title": "角色管理",
+    "link": "/message/notice"
+  }, {
+    "title": "部门管理",
+    "link": "/message/notice"
+  }, {
+    "title": "员工管理",
+    "link": "/message/notice"
+  }]
+}

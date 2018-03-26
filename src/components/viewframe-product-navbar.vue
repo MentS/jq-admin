@@ -10,7 +10,7 @@
             <ul>
               <li v-for="item in items">
                 <div>
-                  <router-link :to="item.subs ? '#': item.link">
+                  <router-link :to="item.subs ? '#': item.href">
                     <div class="nav-icon">
                       <span class="icon-arrow-down" v-show="item.subs"></span>
                     </div>

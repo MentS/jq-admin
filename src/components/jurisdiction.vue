@@ -1,147 +1,36 @@
 <template>
-  <div>
-    <div style="margin-top: 16px;">
-      <div class="pull-right">
-        <button class="btn btn-primary btn-sm" @click="handleDialogOpen">添加站点</button>
-      </div>
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a href="#">全部游戏</a>
-        </li>
-        <li>
-          <a href="#">高频彩</a>
-        </li>
-        <li>
-          <a href="#">低频彩</a>
-        </li>
-        <li>
-          <a href="#">六合彩</a>
-        </li>
-        <li>
-          <a href="#">福利彩</a>
-        </li>
-      </ul>
-    </div>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>
-            <input type="checkbox" name="ckSelectAll" id="ckSelectAll">
-          </th>
-          <th>游戏名词</th>
-          <th>游戏状态</th>
-          <!-- <th>游戏分类</th>
-          <th>玩法分类</th> -->
-          <th>开奖球数</th>
-          <th>上期开奖</th>
-          <th>下期开奖</th>
-          <th class="text-right">操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="checkbox" name="ckbox"></td>
-          <td>
-            <a href="JavaScript:;" class="sub-style">重庆时时彩</a>
-          </td>
-          <td>投注中...</td>
-          <!-- <td>高频彩</td>
-          <td>时时彩</td> -->
-          <td>5</td>
-          <td>
-            <a href="JavaScript:;" title="开奖时间 2018-08-22 00:00:00">1-2-3-4-5-6</a>
-            <br />
-            <a href="JavaScript:;" title="开奖时间 2018-08-22 00:00:00">201801001</a>
-          </td>
-          <td>
-            <a href="JavaScript:;" title="开奖时间">2018-08-22 00:00:00</a>
-            <br />
-            <a href="JavaScript:;" title="下期期号">201801002</a>
-          </td>
-          <td class="text-right">
-            <a href="#">生产期号</a>
-            <span class="text-explode">|</span>
-            <a href="#">编辑</a>
-          </td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="ckbox"></td>
-          <td>
-            <a href="JavaScript:;" class="sub-style">重庆时时彩</a>
-          </td>
-          <td>已封盘</td>
-          <!-- <td>高频彩</td>
-          <td>时时彩</td> -->
-          <td>5</td>
-          <td>
-            <a href="JavaScript:;" title="开奖时间 2018-08-22 00:00:00">1-2-3-4-5-6</a>
-            <br />
-            <a href="JavaScript:;" title="开奖时间 2018-08-22 00:00:00">201801001</a>
-          </td>
-          <td>
-            <a href="JavaScript:;" title="开奖时间">2018-08-22 00:00:00</a>
-            <br />
-            <a href="JavaScript:;" title="下期期号">201801002</a>
-          </td>
-          <td class="text-right">
-            <a href="#">生产期号</a>
-            <span class="text-explode">|</span>
-            <a href="#">编辑</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <modal-dialog :open="dialogOpen">
-      <form class="form-horizontal" slot="body">
-        <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Remember me
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Sign in</button>
-          </div>
-        </div>
-      </form>
-    </modal-dialog>
+  <div class="viewFramework-product" :class="navbarOpen">
+    <viewframe-product-navbar @toggle="handleProductNavbarToggle" :products="data" slot="navbar" />
+    <viewframe-product-body :title="title">
+    </viewframe-product-body>
   </div>
 </template>
 
 <script>
-import ModalDialog from "../modal-dialog";
+import ViewframeProduct from "./viewframe-product";
+import ViewframeProductNavbar from "./viewframe-product-navbar";
+import ViewframeProductBody from "./viewframe-product-body";
+import products from "./jurisdiction/product.json";
 
 export default {
+  components: {
+    ViewframeProduct,
+    ViewframeProductNavbar,
+    ViewframeProductBody
+  },
   name: "GameIndex",
-  components: { ModalDialog },
   data() {
     return {
-      data: {
-        title: "游戏管理",
+      title: "权限系统",
+      products: {
+        title: "权限管理",
         items: []
       },
-      dialogOpen: false,
       productNavbarOpen: true
     };
   },
   created() {
-    // this.data = products;
+    this.data = products;
   },
   computed: {
     navbarOpen: {
@@ -151,9 +40,6 @@ export default {
     }
   },
   methods: {
-    handleDialogOpen() {
-      this.dialogOpen = true;
-    },
     handleProductNavbarToggle(e) {
       this.productNavbarOpen = !e;
     }
@@ -487,8 +373,5 @@ export default {
   background: #f5f5f6;
   border: 1px solid #f5f5f6;
   transition: all 0.15s, 0.15s;
-}
-.table > tbody > tr > td {
-  vertical-align: middle;
 }
 </style>

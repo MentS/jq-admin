@@ -8,6 +8,7 @@
 <script>
 import "./assets/bootstrap.css";
 import "./assets/aliyun-console-font.css";
+import "./assets/console.css"
 import "./assets/topbar-sidebar-iconfont.css";
 import Viewframe from "@/components/viewframe";
 

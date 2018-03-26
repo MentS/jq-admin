@@ -16,8 +16,8 @@
           </div>
           <div class="modal-footer">
             <slot name="footer">
-              <!-- <button type="button" class="btn btn-default">Close</button>
-              <button type="button" class="btn btn-primary">Save</button> -->
+              <button type="button" class="btn btn-default">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
             </slot>
           </div>
         </div>
@@ -39,12 +39,12 @@ export default {
   },
   data() {
     return {
-     
+      open: true
     };
   },
   methods: {
     close() {
-      // this.open = false;
+      this.open = false;
       this.$emit('close');
     }
   }

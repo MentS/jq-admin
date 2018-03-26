@@ -1,0 +1,51 @@
+{
+  "title": "站点管理",
+  "items": [{
+    "title": "游戏配置",
+    "icon": "topbar-sidebar-circle",
+    "link": "/game",
+    "target": "_self",
+    "subs": [{
+        "title": "赔率管理"
+      },
+      {
+        "title": "赔率管理"
+      }
+    ]
+  }, {
+    "title": "代理配置",
+    "icon": "",
+    "link": "/game",
+    "subs": [{
+        "title": "分红设定",
+        "link": "/game/playCategory"
+      },
+      {
+        "title": "代理冻结",
+        "link": "/game/playCategory"
+      }
+    ]
+  }, {
+    "title": "会员管理",
+    "icon": "",
+    "link": "/game",
+    "subs": [{
+      "title": "会员积分",
+      "link": "/game/playCategory"
+    }]
+  }, {
+    "title": "站点配置",
+    "icon": "",
+    "link": "/game/sixmark",
+    "subs": [{
+      "title": "基本设置"
+    }]
+  }, {
+    "title": "试玩账号",
+    "icon": "",
+    "link": "/game/sixmark",
+    "subs": [{
+      "title": "基本设置"
+    }]
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "消息公告",
+  "items": [{
+    "title": "平台公告",
+    "href": "/message/notice"
+  }, {
+    "title": "站点公告",
+    "href": "/message/message"
+  }, {
+    "title": "会员消息",
+    "href": "/message/guestbook"
+  }]
+}

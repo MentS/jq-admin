@@ -1,26 +1,22 @@
 <template>
-  <div>
+  <div class="guestbook">
     <div style="margin-top: 16px;">
-      <div class="pull-right">
-        <button class="btn btn-primary btn-sm" @click="handleDialogOpen">添加站点</button>
+      <div>
+        <div class="pull-left">
+          <div class="from-inline">
+            <div class="form-group">
+              <label for="">标题：</label>  
+              <input class="form-control">
+            </div>
+            <button class="btn btn-default">查询</button>
+            <button class="btn btn-warning">清空查询</button>
+          </div>
+        </div>
+        
+        <div class="pull-right">
+          <!-- <button class="btn btn-primary"> 新增</button> -->
+        </div>
       </div>
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a href="#">全部游戏</a>
-        </li>
-        <li>
-          <a href="#">高频彩</a>
-        </li>
-        <li>
-          <a href="#">低频彩</a>
-        </li>
-        <li>
-          <a href="#">六合彩</a>
-        </li>
-        <li>
-          <a href="#">福利彩</a>
-        </li>
-      </ul>
     </div>
     <table class="table table-hover">
       <thead>
@@ -91,45 +87,17 @@
         </tr>
       </tbody>
     </table>
-    <modal-dialog :open="dialogOpen">
-      <form class="form-horizontal" slot="body">
-        <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Remember me
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Sign in</button>
-          </div>
-        </div>
-      </form>
-    </modal-dialog>
+    
   </div>
+  
 </template>
 
 <script>
-import ModalDialog from "../modal-dialog";
+
 
 export default {
-  name: "GameIndex",
-  components: { ModalDialog },
+  name: "",
+  components: {},
   data() {
     return {
       data: {
@@ -137,6 +105,7 @@ export default {
         items: []
       },
       dialogOpen: false,
+      mesopen:false,
       productNavbarOpen: true
     };
   },
@@ -144,24 +113,25 @@ export default {
     // this.data = products;
   },
   computed: {
-    navbarOpen: {
-      get() {
-        return this.productNavbarOpen ? "viewFramework-product-col-1" : "";
-      }
-    }
+    
   },
   methods: {
-    handleDialogOpen() {
-      this.dialogOpen = true;
-    },
-    handleProductNavbarToggle(e) {
-      this.productNavbarOpen = !e;
-    }
-  }
+
+  },
+   
 };
 </script>
 
 <style>
+.form-group {
+  margin-right: 10px;
+  display: inline-block;
+}
+.form-control {
+  display: inline-block;
+  width: 200px;
+}
+
 .console-container {
   padding: 0 15px 30px;
 }
