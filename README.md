@@ -1,84 +1,21 @@
-- 平台管理
-    - 公告消息
-      - 平台公告
-      - 站点公告
-      - 平台消息
-    - 权限系统
-      - 菜单管理
-      - 角色管理
-      - 部门管理
-      - 员工管理
-    - 系统配置
-      - 银行表
-      - 银行网点
-      - 字典表
-      - 黑名单
-      - 其它相关
-- 用户中心
-  - 平台用户
-     - 修改密码
-     - 管理员
-     - 操作记录
-  - 站点会员
-      - 会员等级
-      - 会员积分
-      - 积分流水
-      - 资金记录
-      - 操作记录
-  - 代理用户
-      - 分红记录
-      - 分红设定
-      - 返点设定
-      - 限额设定
-  - 站点用户
-      - root密码
-      - 管理账号
-- 站点中心
-  - 站点列表
-  - 推广链接
-- 游戏中心
-  - 彩票游戏
-      - 彩种管理
-          - 彩种类型
-          - 彩种列表
-          - 添加彩种
-      - 玩法管理
-          - 玩法分类管理
-          - 玩法详情管理
-      - 赔率模板
-          - 赔率模板管理
-      - 采集中心
-      - 开奖中心
-          - 开奖结果查询
-      - 期号管理
-          - 期号模板管理
-          - 彩种期号管理
-      - 追号管理
-          - 追号列表
-      - 投注管理
-          - 投注列表
-- 日志中心
-  - 服务日志
-  - 业务日志
-  - 异常日志
-- 财务中心
-  - 收款管理
-      - 存款模式
-      - 人工存入
-      - 第三方支付
-          - 第三方支付管理
-          - 第三方支付账号
-          - 第三方支付日志
-      - 预付卡
-          - 预付卡列表
-          - 预付卡日志
-      - 线下收款
-          - 线下收款日志
-          - 线下收款记录
-    - 出款管理
-      - 取款模式管理
-      - 出款总账
-      - 人工出款
-          - 人工出款记录  
-    - 对账 
+# jq-admin
 
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

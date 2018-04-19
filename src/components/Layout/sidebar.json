@@ -1,0 +1,100 @@
+[{
+  "id": "1",
+  "title": "平台服务",
+  "active": true,
+  "items": [{
+    "title": "消息公告",
+    "icon": "topbar-sidebar-market",
+    "href": "/message",
+    "children":[{
+      "title": "平台消息",
+      "href": "/notice"
+   }]
+  }, {
+    "title": "权限系统",
+    "icon": "topbar-sidebar-dide",
+    "href": "/jurisdiction"
+  }, {
+    "title": "系统设置",
+    "icon": "topbar-sidebar-dide",
+    "href": "/configure"
+   
+  }, {
+    "title": "K8S",
+    "icon": "topbar-sidebar-pai",
+    "href": "//dev.job.jq.cn/",
+    "target": "_blank"
+  }, {
+    "title": "消息队列",
+    "icon": "topbar-sidebar-dide",
+    "href": "//dev.job.jq.cn/",
+    "target": "_blank"
+  }, {
+    "title": "数据库",
+    "icon": "topbar-sidebar-ecs",
+    "href": "//dev.job.jq.cn/",
+    "target": "_blank"
+  }, {
+    "title": "ELK",
+    "icon": "topbar-sidebar-elasticsearch",
+    "href": "//dev.job.jq.cn/",
+    "target": "_blank"
+  }]
+},
+{
+  "id": "2",
+  "title": "用户中心",
+  "active": false,
+  "items": [{
+    "title": "平台用户",
+    "icon": "topbar-sidebar-user"
+  }, {
+    "title": "站点用户",
+    "icon": "topbar-sidebar-dide"
+  }, {
+    "title": "站点会员",
+    "icon": "topbar-sidebar-dide"
+  }, {
+    "title": "代理用户",
+    "icon": "topbar-sidebar-dide"
+  }]
+}, {
+  "id": "3",
+  "title": "财务中心",
+  "active": false,
+  "items": [{
+    "title": "收款管理",
+    "icon": "topbar-sidebar-dide",
+    "href": "//dev.job.jq.cn/",
+    "target": "_blank"
+  }]
+}, {
+  "id": "4",
+  "title": "游戏中心",
+  "active": false,
+  "items": [{
+    "title": "彩票管理",
+    "icon": "topbar-sidebar-ecs",
+    "href": "#"
+  }]
+},
+{
+  "id": "5",
+  "title": "系统设置",
+  "active": false,
+  "items": [{
+      "title": "运行日志",
+      "icon": "topbar-sidebar-dide",
+      "href": "//dev.job.jq.cn/",
+      "target": "_blank"
+    }
+  ]
+},
+{
+  "id":" 6",
+  "title": "CMS",
+  "items":[
+    
+  ]
+}
+]
