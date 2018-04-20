@@ -14,7 +14,7 @@
       <template v-for="(item, itemindex) in data">
         <el-submenu :index="itemindex" :key="item.title" >
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <i :class="item.icon"></i>
             <span slot="title">{{ item.title }}</span>
           </template>
 
@@ -27,10 +27,11 @@
 
                 <!--  -->
               <template v-for="(chil, chilindex) in sub.children">
-                <el-menu-item :index="itemindex + '-' +subindex + '-'+ chilindex" :key="chil.title">
-                  <span slot="title">{{ chil.title }}</span>
-                </el-menu-item>
-               
+                <router-link :to="{ path:chil.href }" :key="chilindex">
+                  <el-menu-item :index="itemindex + '-' +subindex + '-'+ chilindex" :key="chil.title">
+                    <span slot="title">{{ chil.title }}</span>
+                  </el-menu-item> 
+                </router-link>
               </template>
               <!--  -->
 

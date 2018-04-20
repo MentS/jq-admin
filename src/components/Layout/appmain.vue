@@ -1,9 +1,9 @@
 <template>
   <div class="main el-main">
     
-    main
+    <router-view></router-view>
+    
   </div>
-  <!-- <el-main>Main</el-main> -->
 </template>
 
 <script>

@@ -1,23 +1,60 @@
 [{
   "id": "1",
   "title": "平台服务",
+  "icon": "el-icon-location",
   "active": true,
   "items": [{
     "title": "消息公告",
-    "icon": "topbar-sidebar-market",
+    
     "href": "/message",
     "children":[{
-      "title": "平台消息",
-      "href": "/notice"
+      "title": "平台公告",
+      "href": "/message/notice"
+   },{
+      "title": "站点公告",
+      "href": "/message/message"
+   },{
+      "title": "会员留言",
+      "href": "/message/guestbook"
    }]
   }, {
     "title": "权限系统",
     "icon": "topbar-sidebar-dide",
-    "href": "/jurisdiction"
+    "href": "/jurisdiction",
+    "children":[
+      {
+        "title": "资源管理",
+        "href": "/jurisdiction/resource"
+      }, {
+        "title": "角色管理",
+        "href": "/jurisdiction/role"
+      },{
+        "title": "部门管理",
+        "href": "/jurisdiction/department"
+      },{
+        "title": "员工管理",
+        "href": "/jurisdiction/staff"
+      }
+    ]
   }, {
     "title": "系统设置",
     "icon": "topbar-sidebar-dide",
-    "href": "/configure"
+    "href": "/configure",
+    "children":[
+      {
+        "title": "银行表",
+        "href": "/configure/bank"
+      }, {
+        "title": "银行网点",
+        "href": "/configure/bankDot"
+      }, {
+        "title": "字典表",
+        "href": "/configure/blacklist"
+      },{
+        "title": "黑名单",
+        "href": "/configure/dictionaries"
+      }
+    ]
    
   }, {
     "title": "K8S",
@@ -44,6 +81,7 @@
 {
   "id": "2",
   "title": "用户中心",
+  "icon": "el-icon-info",
   "active": false,
   "items": [{
     "title": "平台用户",
@@ -60,6 +98,7 @@
   }]
 }, {
   "id": "3",
+  "icon": "el-icon-edit-outline",
   "title": "财务中心",
   "active": false,
   "items": [{
@@ -70,6 +109,7 @@
   }]
 }, {
   "id": "4",
+  "icon": "el-icon-menu",
   "title": "游戏中心",
   "active": false,
   "items": [{
@@ -80,6 +120,7 @@
 },
 {
   "id": "5",
+  "icon": "el-icon-setting",
   "title": "系统设置",
   "active": false,
   "items": [{
@@ -92,6 +133,7 @@
 },
 {
   "id":" 6",
+  "icon": "el-icon-news",
   "title": "CMS",
   "items":[
     
