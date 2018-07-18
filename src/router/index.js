@@ -10,7 +10,7 @@ export default new Router({
   mode: 'history',   
   routes: [
     {
-      path: '/layout',
+      path: '',
       name: 'Layout',
       component: Layout,
       children: [{
